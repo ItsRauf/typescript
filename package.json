@@ -1,0 +1,34 @@
+{
+  "name": "typescript",
+  "packageManager": "yarn@3.2.2",
+  "license": "MIT",
+  "scripts": {
+    "develop": "yarn run tsx watch ./src/main.ts",
+    "start": "yarn node ./dist/main.js",
+    "compile": "yarn run tsup",
+    "test:tsc": "yarn run tsc --project tsconfig.json",
+    "test": "yarn run vitest run",
+    "lint:code": "yarn run eslint --max-warnings 0 src/**/*.ts",
+    "lint:style": "yarn run prettier --check --ignore-path .gitignore .",
+    "lint": "yarn lint:code && yarn lint:style",
+    "format": "yarn run prettier --write --ignore-path .gitignore ."
+  },
+  "devDependencies": {
+    "@types/eslint": "^8",
+    "@types/node": "^18.6.4",
+    "@types/prettier": "^2",
+    "@typescript-eslint/eslint-plugin": "^5.32.0",
+    "@typescript-eslint/parser": "^5.32.0",
+    "@vitest/ui": "^0.21.1",
+    "c8": "^7.12.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "prettier": "^2.7.1",
+    "tsup": "^6.2.1",
+    "tsx": "^3.8.1",
+    "typescript": "^4.7.4",
+    "vitest": "^0.21.0"
+  }
+}
